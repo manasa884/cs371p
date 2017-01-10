@@ -126,11 +126,17 @@ sync:
     ../../examples/c++/ examples
 	@rsync -r -t -u -v --delete              \
     --include "UnitTests1.c++"               \
+    --include "UnitTests1.h"                 \
     --include "UnitTests2.c++"               \
+    --include "UnitTests2.h"                 \
     --include "UnitTests3.c++"               \
+    --include "UnitTests3.h"                 \
     --include "Coverage1.c++"                \
+    --include "Coverage1.h"                  \
     --include "Coverage2.c++"                \
+    --include "Coverage2.h"                  \
     --include "Coverage3.c++"                \
+    --include "Coverage3.h"                  \
     --include "IsPrime1.c++"                 \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
