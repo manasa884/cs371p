@@ -138,6 +138,7 @@ sync:
     --include "Coverage3.c++"                \
     --include "Coverage3.h"                  \
     --include "IsPrime1.c++"                 \
+    --include "IsPrime1.h"                   \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
 
