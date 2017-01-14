@@ -55,13 +55,6 @@ clean:
 	@echo
 	cd exercises; make clean
 
-#	@echo
-#	cd projects/collatz; make clean
-#	@echo
-#	cd projects/allocator; make clean
-#	@echo
-#	cd projects/darwin; make clean
-
 config:
 	git config -l
 
@@ -105,11 +98,6 @@ push:
 	git push
 	git status
 
-#	git add projects/collatz
-#	git add projects/allocator
-#	git add projects/darwin
-#	git add projects/life
-
 status:
 	make clean
 	@echo
@@ -142,115 +130,12 @@ sync:
     --exclude "*"                            \
     ../../exercises/c++/ exercises
 
-#    --include "Exceptions.c++"               \
-#    --include "Variables.c++"                \
-#    --include "Types.c++"                    \
-#    --include "Operators.c++"                \
-#    --include "Arguments.c++"                \
-#    --include "BoostSerialization.c++"       \
-#    --include "Iterators.c++"                \
-#    --include "Cache.c++"                    \
-#    --include "Returns.c++"                  \
-#    --include "Consts.c++"                   \
-#    --include "Arrays.c++"                   \
-#    --include "FunctionOverloading.c++"      \
-#    --include "Move.c++"                     \
-#    --include "MethodOverriding1.c++"        \
-#    --include "MethodOverriding2.c++"        \
-#    --include "Classes.c++"                  \
-#    --include "SharedPtr.c++"                \
-#    --include "UniquePtr.c++"                \
-#
-#    --include "IsPrime2.c++"                 \
-#    --include "Incr.c++"                     \
-#    --include "Incr.h"                       \
-#    --include "Equal.c++"                    \
-#    --include "Equal.h"                      \
-#    --include "Copy.c++"                     \
-#    --include "Copy.h"                       \
-#    --include "Fill.c++"                     \
-#    --include "Fill.h"                       \
-#    --include "RMSE.c++"                     \
-#    --include "RMSE.h"                       \
-#    --include "AllOf.c++"                    \
-#    --include "AllOf.h"                      \
-#    --include "RangeIterator.c++"            \
-#    --include "RangeIterator.h"              \
-#    --include "Range.c++"                    \
-#    --include "Range.h"                      \
-#    --include "Vector1.c++"                  \
-#    --include "Vector1.h"                    \
-#    --include "Vector2.c++"                  \
-#    --include "Vector2.h"                    \
-#    --include "Vector3.c++"                  \
-#    --include "Vector3.h"                    \
-#    --include "Memory.h"                     \
-#    --include "Vector4.c++"                  \
-#    --include "Vector4.h"                    \
-#    --include "Shapes1.c++"                  \
-#    --include "Shapes1.h"                    \
-#    --include "Shapes2.c++"                  \
-#    --include "Shapes2.h"                    \
-#    --include "Shapes3.c++"                  \
-#    --include "Shapes3.h"                    \
-#    --include "Shapes.h"                     \
-#    --include "Handle1.c++"                  \
-#    --include "Handle1.h"                    \
-#    --include "Handle2.c++"                  \
-#    --include "Handle2.h"                    \
-#    --include "Handle3.c++"                  \
-
-#	@rsync -r -t -u -v --delete              \
-#    --include "Collatz.c++"                  \
-#    --include "Collatz.h"                    \
-#    --include "RunCollatz.c++"               \
-#    --include "RunCollatz.in"                \
-#    --include "RunCollatz.out"               \
-#    --include "TestCollatz.c++"              \
-#    --include "TestCollatz.out"              \
-#    --exclude "*"                            \
-#    ../../projects/c++/collatz/ projects/collatz
-#	@rsync -r -t -u -v --delete              \
-#    --include "Allocator.h"                  \
-#    --include "TestAllocator.c++"            \
-#    --include "TestAllocator.out"            \
-#    --exclude "*"                            \
-#    ../../projects/c++/allocator/ projects/allocator
-#	@rsync -r -t -u -v --delete              \
-#    --include "Darwin.c++"                   \
-#    --include "Darwin.h"                     \
-#    --include "RunDarwin.c++"                \
-#    --include "RunDarwin.in"                 \
-#    --include "RunDarwin.out"                \
-#    --include "TestDarwin.c++"               \
-#    --include "TestDarwin.out"               \
-#    --exclude "*"                            \
-#    ../../projects/c++/darwin/ projects/darwin
-#	@rsync -r -t -u -v --delete              \
-#    --include "Life.h"                       \
-#    --include "RunLife.c++"                  \
-#    --include "RunLife.in"                   \
-#    --include "RunLife.out"                  \
-#    --include "TestLife.c++"                 \
-#    --include "TestLife.out"                 \
-#    --exclude "*"                            \
-#    ../../projects/c++/life/ projects/life
-
 test:
 	make clean
 	@echo
 	cd examples; make test
 	@echo
 	cd exercises; make test
-
-#	@echo
-#	cd projects/collatz; make test
-#	@echo
-#	cd projects/allocator; make test
-#	@echo
-#	-cd projects/darwin; make test
-#	@echo
-#	-cd projects/life; make test
 
 versions:
 	which make
