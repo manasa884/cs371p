@@ -107,7 +107,7 @@ status:
 
 sync:
 	@rsync -r -t -u -v --delete              \
-    --include "Docker.sh"                    \
+    --include "Docker.txt"                   \
     --include "Hello.c++"                    \
     --include "Assertions.c++"               \
     --exclude "*"                            \
