@@ -55,11 +55,11 @@ endif
 
 %.app: %.c++
 	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
-	-$(CLANG-CHECK) -extra-arg=-std=c++14          $< --
-	-$(CLANG-CHECK) -extra-arg=-std=c++14 -analyze $< --
+	-$(CLANG-CHECK) -extra-arg=-std=c++11          $< --
+	-$(CLANG-CHECK) -extra-arg=-std=c++11 -analyze $< --
 
 %.c++x: %.app
-	$<
+	./$<
 
 clean:
 	rm -f *.app

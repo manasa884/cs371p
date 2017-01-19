@@ -34,6 +34,6 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
 
-% Hello
+% ./Hello
 Nothing to be done.
 */

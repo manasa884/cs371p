@@ -59,11 +59,11 @@ endif
 
 %.app: %.c++ %.h
 	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) $< -o $@ $(LDFLAGS)
-	-$(CLANG-CHECK) -extra-arg=-std=c++14          $< --
-	-$(CLANG-CHECK) -extra-arg=-std=c++14 -analyze $< --
+	-$(CLANG-CHECK) -extra-arg=-std=c++11          $< --
+	-$(CLANG-CHECK) -extra-arg=-std=c++11 -analyze $< --
 
 %.c++x: %.app
-	$<
+	./$<
 	$(GCOV) -b $(<:.app=.c++) | grep -A 5 "File '$(<:.app=.c++)'"
 
 clean:
