@@ -59,7 +59,7 @@ endif
 	-$(CLANG-CHECK) -extra-arg=-std=c++14 -analyze $< --
 
 %.c++x: %.app
-	./$<
+	$<
 
 clean:
 	rm -f *.app

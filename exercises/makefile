@@ -63,7 +63,7 @@ endif
 	-$(CLANG-CHECK) -extra-arg=-std=c++14 -analyze $< --
 
 %.c++x: %.app
-	./$<
+	$<
 	$(GCOV) -b $(<:.app=.c++) | grep -A 5 "File '$(<:.app=.c++)'"
 
 clean:
