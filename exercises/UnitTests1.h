@@ -17,5 +17,4 @@ int cycle_length (int n) {
     assert(c > 0);
     return c;}
 
-
 #endif // UnitTests1_h
