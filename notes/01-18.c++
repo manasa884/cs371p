@@ -1,9 +1,10 @@
------------
-Wed, 18 Jan
------------
+// -----------
+// Wed, 18 Jan
+// -----------
 
-// is C++'s line  comment
-/* is C++'s block comment
+/*
+double slash is C++'s line  comment
+slash  star  is C++'s block comment
 
 C++'s #include has no Java analog
 C++'s using is analogous to Java's import
@@ -20,3 +21,4 @@ repeat that until 1
 
 cycle length of 5 is 6
 cycle length of 10 is 7
+*/
