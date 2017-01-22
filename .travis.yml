@@ -12,6 +12,7 @@ addons:
     packages:
       - libboost-all-dev
       - doxygen
+      - g++-5
       - libgtest-dev
       - valgrind
 

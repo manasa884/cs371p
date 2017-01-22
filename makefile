@@ -13,7 +13,7 @@ ifeq ($(shell uname), Darwin)                                           # Apple
     DOXYGEN      := doxygen
     CLANG-FORMAT := clang-format
 else ifeq ($(CI), true)                                                 # Travis CI
-    CXX          := g++
+    CXX          := g++-5
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
     LIB          := $(PWD)/gtest
