@@ -1,5 +1,3 @@
-.PHONY: Collatz.log
-
 .DEFAULT_GOAL := test
 
 FILES :=            \
@@ -17,7 +15,6 @@ FILES :=            \
 
 # uncomment these:
 #    .travis.yml                       \
-#    UVaCollatz.c++                    \
 #    collatz-tests/EID-RunCollatz.in   \
 #    collatz-tests/EID-RunCollatz.out  \
 #    collatz-tests/EID-TestCollatz.c++ \
