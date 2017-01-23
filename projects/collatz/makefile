@@ -17,8 +17,6 @@ FILES :=            \
 #    .travis.yml                       \
 #    collatz-tests/EID-RunCollatz.in   \
 #    collatz-tests/EID-RunCollatz.out  \
-#    collatz-tests/EID-TestCollatz.c++ \
-#    collatz-tests/EID-TestCollatz.out \
 
 ifeq ($(shell uname), Darwin)                                           # Apple
     CXX          := g++
