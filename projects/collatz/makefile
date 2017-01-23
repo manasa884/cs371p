@@ -74,7 +74,7 @@ else                                                                    # UTCS
 endif
 
 collatz-tests:
-	git clone https://github.com/cs371p-fall-2016/collatz-tests.git
+	git clone https://github.com/cs371pt-spring-2017/collatz-tests.git
 
 html: Doxyfile Collatz.h Collatz.c++ RunCollatz.c++ TestCollatz.c++
 	doxygen Doxyfile
