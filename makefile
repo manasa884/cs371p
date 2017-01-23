@@ -54,6 +54,8 @@ clean:
 	cd examples; make clean
 	@echo
 	cd exercises; make clean
+	@echo
+	cd projects/collatz; make clean
 
 config:
 	git config -l
@@ -92,6 +94,7 @@ push:
 	git add Dockerfile
 	git add examples
 	git add exercises
+	git add projects
 	git add makefile
 	git add notes
 	git commit -m "another commit"
@@ -129,6 +132,16 @@ sync:
     --include "IsPrime1.h"                   \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
+	@rsync -r -t -u -v --delete              \
+    --include "Collatz.c++"                  \
+    --include "Collatz.h"                    \
+    --include "RunCollatz.c++"               \
+    --include "RunCollatz.in"                \
+    --include "RunCollatz.out"               \
+    --include "TestCollatz.c++"              \
+    --include "TestCollatz.out"              \
+    --exclude "*"                            \
+    ../../projects/c++/collatz/ projects/collatz
 
 test:
 	make clean
@@ -136,6 +149,8 @@ test:
 	cd examples; make test
 	@echo
 	cd exercises; make test
+	@echo
+	cd projects/collatz; make test
 
 versions:
 	which make
