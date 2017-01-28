@@ -14,9 +14,9 @@ FILES :=            \
     TestCollatz.out
 
 # uncomment these:
-#    .travis.yml                       \
-#    collatz-tests/EID-RunCollatz.in   \
-#    collatz-tests/EID-RunCollatz.out  \
+#    .travis.yml                           \
+#    collatz-tests/GitHubID-RunCollatz.in  \
+#    collatz-tests/GitHubID-RunCollatz.out \
 
 ifeq ($(shell uname), Darwin)                                           # Apple
     CXX          := g++
