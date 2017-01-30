@@ -117,6 +117,8 @@ sync:
     --include "Docker.txt"                   \
     --include "Hello.c++"                    \
     --include "Assertions.c++"               \
+    --include "Exceptions.c++"               \
+    --include "Variables.c++"                \
     --exclude "*"                            \
     ../../examples/c++/ examples
 	@rsync -r -t -u -v --delete              \
@@ -134,6 +136,8 @@ sync:
     --include "Coverage3.h"                  \
     --include "IsPrime1.c++"                 \
     --include "IsPrime1.h"                   \
+    --include "IsPrime2.c++"                 \
+    --include "IsPrime2.h"                   \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
 	@rsync -r -t -u -v --delete              \
