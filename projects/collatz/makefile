@@ -23,6 +23,7 @@ ifeq ($(shell uname), Darwin)                                           # Apple
     INCLUDE      := /usr/local/include
     CXXFLAGS     := -pedantic -std=c++14 -I$(INCLUDE) -Wall -Weffc++
     LIB          := /usr/local/lib
+    LIBG         := /usr/local/lib
     LDFLAGS      := -lboost_serialization -lgtest_main
     CLANG-CHECK  := clang-check
     GCOV         := gcov
@@ -35,6 +36,7 @@ else ifeq ($(CI), true)                                                 # Travis
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
     LIB          := /usr/lib
+    LIBG         := $(PWD)/gtest
     LDFLAGS      := -lboost_serialization -lgtest -lgtest_main -pthread
     CLANG-CHECK  := clang-check
     GCOV         := gcov-5
@@ -47,6 +49,7 @@ else ifeq ($(shell uname -p), unknown)                                  # Docker
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
     LIB          := /usr/lib
+    LIBG         := /usr/lib
     LDFLAGS      := -lboost_serialization -lgtest -lgtest_main -pthread
     CLANG-CHECK  := clang-check
     GCOV         := gcov
@@ -59,6 +62,7 @@ else                                                                    # UTCS
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
     LIB          := /usr/local/lib
+    LIBG         := /usr/local/lib
     LDFLAGS      := -lboost_serialization -lgtest -lgtest_main -pthread
     CLANG-CHECK  := clang-check
     GCOV         := gcov
@@ -177,9 +181,9 @@ versions:
 	@echo
 	ls -ald $(INCLUDE)/gtest
 	@echo
-	-ls -al $(LIB)/*boost*
+	ls -al $(LIB)/*boost*
 	@echo
-	-ls -al $(LIB)/*gtest*
+	ls -al $(LIB)/*gtest*
 	@echo
 	which $(CLANG-CHECK)
 	-$(CLANG-CHECK) --version
