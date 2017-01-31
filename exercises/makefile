@@ -11,7 +11,7 @@ ifeq ($(shell uname), Darwin)                                           # Apple
     CXX          := g++
     INCLUDE      := /usr/local/include
     CXXFLAGS     := -pedantic -std=c++14 -I$(INCLUDE) -Wall -Weffc++
-    LIB          := /usr/local/lib
+    LIBB         := /usr/local/lib
     LIBG         := /usr/local/lib
     LDFLAGS      := -lboost_serialization -lgtest_main
     CLANG-CHECK  := clang-check
@@ -24,7 +24,7 @@ else ifeq ($(CI), true)                                                 # Travis
     CXX          := g++-5
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
-    LIB          := /usr/lib
+    LIBB         := /usr/lib
     LIBG         := $(PWD)/gtest
     LDFLAGS      := -lboost_serialization -lgtest -lgtest_main -pthread
     CLANG-CHECK  := clang-check
@@ -37,7 +37,7 @@ else ifeq ($(shell uname -p), unknown)                                  # Docker
     CXX          := g++
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
-    LIB          := /usr/lib
+    LIBB         := /usr/lib
     LIBG         := /usr/lib
     LDFLAGS      := -lboost_serialization -lgtest -lgtest_main -pthread
     CLANG-CHECK  := clang-check
@@ -50,7 +50,7 @@ else                                                                    # UTCS
     CXX          := g++
     INCLUDE      := /usr/include
     CXXFLAGS     := -pedantic -std=c++14 -Wall -Weffc++
-    LIB          := /usr/local/lib
+    LIBB         := /usr/lib/x86_64-linux-gnu
     LIBG         := /usr/local/lib
     LDFLAGS      := -lboost_serialization -lgtest -lgtest_main -pthread
     CLANG-CHECK  := clang-check
