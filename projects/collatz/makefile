@@ -96,6 +96,7 @@ RunCollatz: Collatz.h Collatz.c++ RunCollatz.c++
 	-$(CLANG-CHECK) -extra-arg=-std=c++11          RunCollatz.c++  --
 	-$(CLANG-CHECK) -extra-arg=-std=c++11 -analyze RunCollatz.c++  --
 
+.PHONY: RunCollatz.tmp
 RunCollatz.tmp: RunCollatz
 	./RunCollatz < RunCollatz.in > RunCollatz.tmp
 	diff RunCollatz.tmp RunCollatz.out
@@ -105,6 +106,7 @@ TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 	-$(CLANG-CHECK) -extra-arg=-std=c++11          TestCollatz.c++ --
 	-$(CLANG-CHECK) -extra-arg=-std=c++11 -analyze TestCollatz.c++ --
 
+.PHONY: TestCollatz.tmp
 TestCollatz.tmp: TestCollatz
 	$(VALGRIND) ./TestCollatz                                        >  TestCollatz.tmp 2>&1
 	-$(GCOV) -b Collatz.c++     | grep -A 5 "File 'Collatz.c++'"     >> TestCollatz.tmp
