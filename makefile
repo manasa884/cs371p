@@ -138,6 +138,8 @@ sync:
     --include "IsPrime1.h"                   \
     --include "IsPrime2.c++"                 \
     --include "IsPrime2.h"                   \
+    --include "Incr.c++"                     \
+    --include "Equal.c++"                    \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
 	@rsync -r -t -u -v --delete              \
